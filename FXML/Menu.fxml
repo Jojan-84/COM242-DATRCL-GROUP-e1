@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.FlowPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+
+<BorderPane prefHeight="600.0" prefWidth="1356.0" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.menumanager.MenuController">
+
+    <!-- Sidebar -->
+    <left>
+        <fx:include source="sidebar.fxml" />
+    </left>
+
+    <!-- Top Header -->
+    <top>
+        <HBox spacing="10" style="-fx-background-color: #ffffff; -fx-padding: 15;">
+            <Label style="-fx-font-size: 24px; -fx-font-weight: bold;" text="Menu" />
+            <Pane HBox.hgrow="ALWAYS" />
+            <Button fx:id="AddMenuItem" style="-fx-background-color: #28a745; -fx-text-fill: white;                            -fx-font-weight: bold; -fx-padding: 10 15 10 15;                            -fx-background-radius: 5;" text="+ Add Menu Item" />
+        </HBox>
+    </top>
+
+    <!-- Main Menu Content -->
+    <center>
+        <ScrollPane fitToWidth="true" style="-fx-background-color: transparent;">
+            <VBox spacing="20" style="-fx-padding: 20;">
+                <Label style="-fx-font-size: 18px; -fx-font-weight: bold;" text="Menu Management" />
+
+                <!-- FlowPane adjusted to display 2 columns and wrap properly -->
+                <FlowPane fx:id="menuFlowPane" alignment="CENTER_LEFT" hgap="20" prefHeight="253.0" prefWidth="1094.0" prefWrapLength="900" vgap="20">
+
+                    <!-- Cheeseburger -->
+                    <VBox alignment="TOP_CENTER" prefHeight="240" prefWidth="250" spacing="8" style="-fx-background-color: white; -fx-border-color: #dddddd;                                  -fx-border-radius: 12; -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.15), 10, 0, 0, 4);">
+                        <ImageView fitHeight="120" fitWidth="200" preserveRatio="true">
+                            <image>
+                                <Image url="@../../../../../../../../Downloads/1759745547942_xwy35n_2_1.jpg" />
+                            </image>
+                        </ImageView>
+                        <Label style="-fx-font-weight: bold; -fx-font-size: 16px;" text="Cheese Burger" />
+                        <Label style="-fx-font-size: 14px;" text="₱ 70.00" />
+                        <Label style="-fx-font-size: 12px; -fx-text-fill: #555;" text="Ingredients: Beef Patties, Buns, Cheese Slices" wrapText="true" />
+                        <HBox alignment="CENTER" spacing="10">
+                            <Button style="-fx-background-color: #007bff; -fx-text-fill: white; -fx-background-radius: 5;" text="Edit" />
+                            <Button style="-fx-background-color: #dc3545; -fx-text-fill: white; -fx-background-radius: 5;" text="Delete" />
+                        </HBox>
+                    </VBox>
+
+                    <!-- French Fries -->
+                    <VBox alignment="TOP_CENTER" prefHeight="240" prefWidth="250" spacing="8" style="-fx-background-color: white; -fx-border-color: #dddddd;                                  -fx-border-radius: 12; -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.15), 10, 0, 0, 4);">
+                        <ImageView fitHeight="120" fitWidth="200" preserveRatio="true">
+                            <image>
+                                <Image url="@../../../../../../../../Downloads/1759747775537_f62k4n_2_1.jpg" />
+                            </image>
+                        </ImageView>
+                        <Label style="-fx-font-weight: bold; -fx-font-size: 16px;" text="French Fries" />
+                        <Label style="-fx-font-size: 14px;" text="₱ 100.00" />
+                        <Label style="-fx-font-size: 12px; -fx-text-fill: #555;" text="Ingredients: French Fries" wrapText="true" />
+                        <HBox alignment="CENTER" spacing="10">
+                            <Button style="-fx-background-color: #007bff; -fx-text-fill: white; -fx-background-radius: 5;" text="Edit" />
+                            <Button style="-fx-background-color: #dc3545; -fx-text-fill: white; -fx-background-radius: 5;" text="Delete" />
+                        </HBox>
+                    </VBox>
+
+                    <!-- Soft Drink -->
+                    <VBox alignment="TOP_CENTER" prefHeight="240" prefWidth="250" spacing="8" style="-fx-background-color: white; -fx-border-color: #dddddd;                                  -fx-border-radius: 12; -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.15), 10, 0, 0, 4);">
+                        <ImageView fitHeight="120" fitWidth="200" preserveRatio="true">
+                            <image>
+                                <Image url="@../../../../../../../../Downloads/1759748120432_itk4ge_2_1.jpg" />
+                            </image>
+                        </ImageView>
+                        <Label style="-fx-font-weight: bold; -fx-font-size: 16px;" text="Soft Drink" />
+                        <Label style="-fx-font-size: 14px;" text="₱ 50.00" />
+                        <Label style="-fx-font-size: 12px; -fx-text-fill: #555;" text="Ingredients: Soda Syrup" wrapText="true" />
+                        <HBox alignment="CENTER" spacing="10">
+                            <Button style="-fx-background-color: #007bff; -fx-text-fill: white; -fx-background-radius: 5;" text="Edit" />
+                            <Button style="-fx-background-color: #dc3545; -fx-text-fill: white; -fx-background-radius: 5;" text="Delete" />
+                        </HBox>
+                    </VBox>
+
+                    <!-- Combo Meal -->
+                    <VBox alignment="TOP_CENTER" prefHeight="240" prefWidth="250" spacing="8" style="-fx-background-color: white; -fx-border-color: #dddddd;                                  -fx-border-radius: 12; -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.15), 10, 0, 0, 4);">
+                        <ImageView fitHeight="120" fitWidth="200" preserveRatio="true">
+                            <image>
+                                <Image url="@../../../../../../../../Downloads/IMG_20251006_202210_607.jpg" />
+                            </image>
+                        </ImageView>
+                        <Label style="-fx-font-weight: bold; -fx-font-size: 16px;" text="Combo Meal" />
+                        <Label style="-fx-font-size: 14px;" text="₱ 250.00" />
+                        <Label style="-fx-font-size: 12px; -fx-text-fill: #555;" text="Ingredients: Beef Patties, Buns, Cheese Slices, French Fries, Soda Syrup" wrapText="true" />
+                        <HBox alignment="CENTER" spacing="10">
+                            <Button style="-fx-background-color: #007bff; -fx-text-fill: white; -fx-background-radius: 5;" text="Edit" />
+                            <Button style="-fx-background-color: #dc3545; -fx-text-fill: white; -fx-background-radius: 5;" text="Delete" />
+                        </HBox>
+                    </VBox>
+
+                </FlowPane>
+            </VBox>
+        </ScrollPane>
+    </center>
+</BorderPane>
