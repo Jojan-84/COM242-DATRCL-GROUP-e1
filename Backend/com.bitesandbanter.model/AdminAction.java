@@ -1,6 +1,11 @@
-// AdminAction.java
+/**
+ * Model for the Stack: Stores a reversible command for the Admin Undo feature.
+ * The 'data' field holds the necessary information (e.g., a deleted Product object) 
+ * to execute the inverse action.
+ */
 
 package com.bitesandbanter.model;
+
 public class AdminAction {
     private final String type;
     private final Object data;
