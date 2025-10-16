@@ -1,0 +1,239 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="1400.0" prefWidth="1000.0" style="-fx-background-color: #5b3927;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1">
+   <top>
+      <VBox prefHeight="73.0" prefWidth="1000.0" style="-fx-background-color: transparent;" BorderPane.alignment="CENTER">
+         <children>
+            <HBox prefHeight="100.0" prefWidth="1000.0" style="-fx-background-color: transparent;">
+               <children>
+                  <HBox prefHeight="73.0" prefWidth="391.0" style="-fx-background-color: transparent;">
+                     <children>
+                        <AnchorPane prefHeight="32.0" prefWidth="331.0">
+                           <children>
+                              <Label layoutX="72.0" layoutY="11.0" prefHeight="51.0" prefWidth="228.0" text="Bites&amp;Banter" textFill="#f8ca4b">
+                                 <font>
+                                    <Font name="Corben Bold" size="25.0" />
+                                 </font>
+                              </Label>
+                              <ImageView fitHeight="46.0" fitWidth="54.0" layoutX="14.0" layoutY="16.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@tea.png" />
+                                 </image></ImageView>
+                           </children>
+                        </AnchorPane>
+                     </children>
+                  </HBox>
+                  <HBox prefHeight="73.0" prefWidth="612.0">
+                     <children>
+                        <AnchorPane prefHeight="73.0" prefWidth="618.0">
+                           <children>
+                              <Button layoutX="529.0" layoutY="24.0" mnemonicParsing="false" style="-fx-background-color: transparent;" text="Login" textFill="#f8ca4b">
+                                 <font>
+                                    <Font name="Poppins Bold" size="14.0" />
+                                 </font>
+                              </Button>
+                              <Button layoutX="400.0" layoutY="24.0" mnemonicParsing="false" style="-fx-background-color: transparent;" text="Order Now" textFill="#f8ca4b">
+                                 <font>
+                                    <Font name="Poppins Bold" size="14.0" />
+                                 </font>
+                              </Button>
+                           </children>
+                        </AnchorPane>
+                     </children>
+                  </HBox>
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+   </top>
+   <center>
+      <ScrollPane pannable="true" prefHeight="637.0" prefWidth="1000.0" style="-fx-background: #5b3927; -fx-background-color: #5b3927;" BorderPane.alignment="CENTER">
+         <content>
+            <VBox prefHeight="1300.0" prefWidth="1000.0" style="-fx-background-color: #5b3927;">
+               <children>
+                  <AnchorPane prefHeight="291.0" prefWidth="1001.0">
+                     <children>
+                        <ImageView fitHeight="302.0" fitWidth="1000.0" layoutY="10.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../Downloads/Untitled%20design%20(6).png" />
+                           </image>
+                           <effect>
+                              <DropShadow />
+                           </effect>
+                        </ImageView>
+                        <Label layoutX="130.0" layoutY="-18.0" prefHeight="241.0" prefWidth="740.0" style="-fx-text-fill: #f8ca4b;" text="A Taste Of Tradition, A Dash Of Today" textFill="#f8ca4b">
+                           <font>
+                              <Font name="Corben Bold" size="30.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="227.0" layoutY="141.0" text="Discover The Heart Of Filipino Cooking In A Place Where Every Meal Is A Celebration">
+                           <font>
+                              <Font name="Poppins Bold" size="13.0" />
+                           </font>
+                        </Label>
+                        <Button layoutX="436.0" layoutY="184.0" mnemonicParsing="false" style="-fx-background-color: #f8ca4b; -fx-background-radius: 10px 20px 20px 20px;" text="View Our Menu" textFill="#5b3927">
+                           <font>
+                              <Font name="Poppins Bold" size="15.0" />
+                           </font>
+                        </Button>
+                     </children>
+                  </AnchorPane>
+                  <HBox prefHeight="406.0" prefWidth="1000.0">
+                     <children>
+                        <AnchorPane prefHeight="600.0" prefWidth="984.0">
+                           <children>
+                              <Label layoutX="434.0" layoutY="36.0" prefHeight="57.0" prefWidth="112.0" style="-fx-text-fill: f8ca4b;" text="Our Story" textFill="#f8ca4b" translateX="10.0">
+                                 <font>
+                                    <Font name="Corben Bold" size="17.0" />
+                                 </font>
+                              </Label>
+                              <VBox layoutX="50.0" layoutY="79.0" prefHeight="330.0" prefWidth="870.0" style="-fx-background-color: #6c5149; -fx-background-radius: 20px 20px 20px 20px;" translateY="70.0">
+                                 <children>
+                                    <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text=" At Bites &amp; Banter, we believe that food is more than just sustenance; it's a multi-sensory experience that connects us to our heritage and to each other. Our entire concept is built around the beautiful Filipino tradition of gathering around the table to share not just meals, but moments. We've created a warm, inviting atmosphere where the comforting aroma of home-cooked meals fills the air, and the sound of cheerful conversation—the &quot;banter&quot;—is always welcome. This is a place where stories are exchanged over sizzling sisig, where laughter rings out between spoonfuls of halo-halo, and where new memories are forged with every visit." translateX="60.0" translateY="20.0" wrappingWidth="753.2096900939941">
+                                       <font>
+                                          <Font name="Poppins Light" size="14.0" />
+                                       </font>
+                                    </Text>
+                                    <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Our menu is a heartfelt celebration of traditional Filipino flavors, lovingly prepared with a creative, modern twist that will surprise and delight your palate. We honor the recipes passed down through generations while infusing them with a fresh perspective. By partnering with local farmers and purveyors, we ensure that only the freshest, highest-quality ingredients make it to your plate. From the robust flavors of our Kare-Kare to the delicate sweetness of our Buko Pandan, each dish is a testament to our passion for culinary excellence. Whether you're joining us for a quick, satisfying lunch or settling in for a leisurely family " translateX="60.0" translateY="40.0" wrappingWidth="755.5058155059814">
+                                       <font>
+                                          <Font name="Poppins Light" size="14.0" />
+                                       </font>
+                                    </Text>
+                                 </children>
+                                 <effect>
+                                    <DropShadow />
+                                 </effect>
+                              </VBox>
+                              <VBox layoutX="100.0" layoutY="334.0" prefHeight="158.0" prefWidth="217.0" style="-fx-background-color: #6c5149; -fx-border-color: white; -fx-border-radius: 15px 15px 15px 15px; -fx-background-radius: 15px 15px 15px 15px;" translateX="-85.0" translateY="225.0">
+                                 <children>
+                                    <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Filipino Cuisine" translateX="45.0" translateY="75.0">
+                                       <font>
+                                          <Font name="Poppins Bold" size="15.0" />
+                                       </font>
+                                    </Text>
+                                    <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="A rich tapestry of flavours from across the archipelago" textAlignment="CENTER" translateX="30.0" translateY="80.0" wrappingWidth="151.896484375">
+                                       <font>
+                                          <Font name="Poppins Light" size="12.0" />
+                                       </font>
+                                    </Text>
+                                 </children>
+                              </VBox>
+                              <VBox layoutX="110.0" layoutY="328.0" prefHeight="158.0" prefWidth="217.0" style="-fx-background-color: #6c5149; -fx-border-color: white; -fx-border-radius: 15px 15px 15px 15px; -fx-background-radius: 15px 15px 15px 15px;" translateX="645.0" translateY="230.0">
+                                 <children>
+                                    <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Warm Atmosphere" translateX="40.0" translateY="75.0">
+                                       <font>
+                                          <Font name="Poppins Bold" size="15.0" />
+                                       </font>
+                                    </Text>
+                                    <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="The perfect place for gathering and celebrations" textAlignment="CENTER" translateX="37.0" translateY="80.0" wrappingWidth="154.484375">
+                                       <font>
+                                          <Font name="Poppins Light" size="12.0" />
+                                       </font>
+                                    </Text>
+                                 </children>
+                              </VBox>
+                              <VBox layoutX="110.0" layoutY="328.0" prefHeight="158.0" prefWidth="217.0" style="-fx-background-color: #6c5149; -fx-border-color: white; -fx-border-radius: 15px 15px 15px 15px; -fx-background-radius: 15px 15px 15px 15px;" translateX="400.0" translateY="230.0">
+                                 <children>
+                                    <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Modern Twist" translateX="55.0" translateY="75.0">
+                                       <font>
+                                          <Font name="Poppins Bold" size="15.0" />
+                                       </font>
+                                    </Text>
+                                    <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Innovative Techniques meet classic filipino dishes" textAlignment="CENTER" translateX="34.0" translateY="80.0" wrappingWidth="152.53125">
+                                       <font>
+                                          <Font name="Poppins Light" size="12.0" />
+                                       </font>
+                                    </Text>
+                                 </children>
+                              </VBox>
+                              <VBox layoutX="110.0" layoutY="344.0" prefHeight="158.0" prefWidth="217.0" style="-fx-background-color: #6c5149; -fx-border-color: white; -fx-border-radius: 15px 15px 15px 15px; -fx-background-radius: 15px 15px 15px 15px;" translateX="150.0" translateY="215.0">
+                                 <children>
+                                    <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Traditional Flavors" translateX="37.0" translateY="75.0">
+                                       <font>
+                                          <Font name="Poppins Bold" size="15.0" />
+                                       </font>
+                                    </Text>
+                                    <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Honoring recipes passed down through generations" textAlignment="CENTER" translateX="30.0" translateY="80.0" wrappingWidth="153.58984375">
+                                       <font>
+                                          <Font name="Poppins Light" size="12.0" />
+                                       </font>
+                                    </Text>
+                                 </children>
+                              </VBox>
+                           </children>
+                        </AnchorPane>
+                     </children>
+                  </HBox>
+                  <VBox prefHeight="302.0" prefWidth="1032.0">
+                     <children>
+                        <AnchorPane prefHeight="200.0" prefWidth="200.0">
+                           <children>
+                              <ImageView fitHeight="68.0" fitWidth="60.0" layoutX="89.0" layoutY="70.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@cutlery.png" />
+                                 </image>
+                              </ImageView>
+                              <ImageView fitHeight="68.0" fitWidth="60.0" layoutX="343.0" layoutY="70.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@chili-pepper.png" />
+                                 </image>
+                              </ImageView>
+                              <ImageView fitHeight="68.0" fitWidth="60.0" layoutX="586.0" layoutY="70.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@blender.png" />
+                                 </image>
+                              </ImageView>
+                              <ImageView fitHeight="68.0" fitWidth="60.0" layoutX="841.0" layoutY="70.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@toast.png" />
+                                 </image>
+                              </ImageView>
+                           </children></AnchorPane>
+                     </children>
+                  </VBox>
+                  <Line endX="901.2929077148438" endY="2.692429304122925" startX="-100.0" stroke="WHITE" translateY="30.0" />
+                  <AnchorPane prefHeight="186.0" prefWidth="1003.0">
+                     <children>
+                        <Text fill="#f8ca4b" layoutX="336.0" layoutY="86.0" strokeType="OUTSIDE" strokeWidth="0.0" text="2025 Bites &amp; Banter. All Rights Reserved." wrappingWidth="331.875">
+                           <font>
+                              <Font name="Poppins Light" size="16.0" />
+                           </font>
+                        </Text>
+                        <Text fill="#9a9a9a" layoutX="351.0" layoutY="113.0" strokeType="OUTSIDE" strokeWidth="0.0" text="www.bitesandbanter.com |  Authenthic Filipino Cuisine" />
+                        <ImageView fitHeight="24.0" fitWidth="24.0" layoutX="490.0" layoutY="42.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@camera.png" />
+                           </image>
+                        </ImageView>
+                        <ImageView fitHeight="22.0" fitWidth="24.0" layoutX="457.0" layoutY="43.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@facebook.png" />
+                           </image>
+                        </ImageView>
+                        <ImageView fitHeight="24.0" fitWidth="22.0" layoutX="522.0" layoutY="43.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@twitter.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </AnchorPane>
+               </children>
+            </VBox>
+         </content>
+      </ScrollPane>
+   </center>
+</BorderPane>
