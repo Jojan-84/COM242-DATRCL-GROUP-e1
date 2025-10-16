@@ -1,4 +1,4 @@
-//Backend Logic & Data Storage
+//Backend Logic
 
 package com.bitesandbanter.service;
 
@@ -17,7 +17,7 @@ import java.util.concurrent.atomic.AtomicInteger;
 import java.util.Optional;
 
 /**
- * Singleton service layer: Holds all application data (Menu, Inventory, Orders) and core logic.
+ * Singleton service layer: Holds all application data and core business logic.
  */
 public class DataService {
 
@@ -39,7 +39,6 @@ public class DataService {
     private DataService() { loadInitialData(); }
 
     private void loadInitialData() {
-        // Initializes data based on the HTML content
         menuItems.addAll(Arrays.asList(
             new Product("menu-1", "Cheese Burger", 70.00, "Juicy beef patty with cheese.", 
                         Map.of("Beef Patties", 1, "Buns", 1, "Cheese Slices", 1)),
@@ -48,8 +47,6 @@ public class DataService {
             new Product("menu-3", "Soft Drink", 50.00, "Refreshing cold soda.", 
                         Map.of("Soda Syrup", 1))
         ));
-
-        // Initializes Inventory data
         inventory.put("Beef Patties", new InventoryItem("Beef Patties", 100, 30));
         inventory.put("Buns", new InventoryItem("Buns", 100, 30));
         inventory.put("Cheese Slices", new InventoryItem("Cheese Slices", 100, 30));
@@ -57,21 +54,17 @@ public class DataService {
         inventory.put("Soda Syrup", new InventoryItem("Soda Syrup", 100, 30));
     }
     
-    // --- Public Getters ---
+    // --- Public Getters & Logic ---
     public ObservableList<Product> getMenuItems() { return menuItems; }
     public PriorityQueue getOrderQueue() { return orderQueue; }
-    public Map<String, InventoryItem> getInventory() { return inventory; }
     public List<Order> getOrderHistory() { return orderHistory; }
 
-    // --- Core Business Logic (Simplified) ---
     public boolean authenticateUser(String username, String password) {
         return password.equals(simpleUsers.get(username)); 
     }
 
     public Optional<Order> placeOrder(List<OrderItem> items) {
-        // ... (Inventory validation/deduction logic goes here) ...
-
-        // Priority Logic (High, Medium, Low based on item count)
+        // Priority Logic: High (5+), Medium (3-4), Low (1-2)
         int totalItemsCount = items.stream().mapToInt(OrderItem::getQuantity).sum();
         int priority = (totalItemsCount >= 5) ? 1 : ((totalItemsCount >= 3) ? 2 : 3);
         
@@ -94,8 +87,6 @@ public class DataService {
 
         if (deletedProduct.isPresent()) {
             menuItems.remove(deletedProduct.get());
-            
-            // PUSH: Record the DELETED item to allow UNDO
             undoStack.push(new AdminAction(
                 "UNDO_ADD_MENU", deletedProduct.get(), "Deleted menu item: " + deletedProduct.get().getName()
             ));
@@ -106,16 +97,12 @@ public class DataService {
     
     public String undoLastAdminAction() {
         if (!canUndo()) { return "No actions to undo."; }
-
         AdminAction action = undoStack.pop();
         
         switch (action.getType()) {
             case "UNDO_ADD_MENU":
                 menuItems.add((Product) action.getData());
                 return "Menu item restored.";
-            case "UNDO_SUBTRACT_INV":
-                // Logic to reverse inventory change
-                return "Inventory restock reversed.";
             default:
                 return "Unknown action type.";
         }
